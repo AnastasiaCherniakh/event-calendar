@@ -6,7 +6,8 @@ export default function DayCell({
     thisMonth=true,
     eventsCount=0,
     eventsForDay=[],
-    onClick=undefined
+    onClick=undefined,
+    isToday=false
  }) {
     const dayNumber = date.getDate();
     const hasEvent = eventsCount > 0;
@@ -27,6 +28,7 @@ export default function DayCell({
         "day-cell",
         thisMonth ? 'in-month' : 'out-month',
         hasEvent ? 'has-event' : '',
+        isToday ? "today" : "",
     ].join(' ').trim();
 
     return (

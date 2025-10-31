@@ -22,6 +22,12 @@
     background-color: #fafafa;
 }
 
+.day-cell.today {
+    border: 2px solid #EC4A3C;
+    color: #EC4A3C;
+    font-weight: 600;
+}
+
 .day-number {
     font-size: 1rem;
     margin-bottom: auto;

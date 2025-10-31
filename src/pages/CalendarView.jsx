@@ -105,6 +105,7 @@ export default function CalendarView( { events }) {
                 {monthCells.map((cell) => {
                     const eventsForDay = eventMap[cell.y_m_d] || [];
                     const eventsCount = eventsForDay.length;
+                    const isToday = cell.y_m_d === convertToString(today);
                     return (
                         <DayCell
                         key={cell.y_m_d}
@@ -113,6 +114,7 @@ export default function CalendarView( { events }) {
                         thisMonth={cell.thisMonth}
                         eventsCount={eventsCount}
                         eventsForDay={eventsForDay}
+                        isToday={isToday}
                         onClick={() => navigate(`/event/${cell.y_m_d}`)}
                         />
                     );
