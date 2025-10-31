@@ -1,3 +1,5 @@
+import './dayCell.css';
+
 export default function DayCell({
     date,
     y_m_d,

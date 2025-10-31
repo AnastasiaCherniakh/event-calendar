@@ -1,0 +1,10 @@
+body {
+    margin: 0;
+    font-family: 'Inter', sans-serif;
+}
+
+main {
+    padding: 1rem;
+    max-width: 900px;
+    margin: 0 auto;
+}

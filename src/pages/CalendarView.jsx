@@ -1,6 +1,7 @@
 import { useState, useMemo } from "react";
 import { useNavigate } from "react-router-dom";
 import DayCell from '../components/DayCell';
+import './calendar.css';
 
 export default function CalendarView( { events }) {
 
