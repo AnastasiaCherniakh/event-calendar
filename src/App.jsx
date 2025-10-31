@@ -10,7 +10,7 @@ export default function App() {
 
   // Convert nested json into flat array of objects
   function simplifyData(rawData) {
-    return rawData.map((event, index) => {
+    return rawData.data.map((event, index) => {
       return {
         id: index,
         date: event.dateVenue,
