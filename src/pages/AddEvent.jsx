@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import './addEvent.css'
 
 export default function AddEvent({ addEvent }){
     const navigate = useNavigate();
