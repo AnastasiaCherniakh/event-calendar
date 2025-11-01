@@ -38,6 +38,11 @@ export default function App() {
     .catch(err => console.log("Something went wrong! Failed to load the data.", err))
   }, []);
 
+   // Add new event to the state
+  const addEvent = (newEvent) => {
+    return setEvents(prev => [...prev, newEvent]);
+  }
+
   return (
     <>
       <Navbar />
@@ -45,7 +50,7 @@ export default function App() {
       <main>
         <Routes>
           <Route path='/' element={<CalendarView events={events}/>} />
-          <Route path='/add-event' element={<AddEvent />} />
+          <Route path='/add-event' element={<AddEvent addEvent={addEvent}/>} />
           <Route path='/event/:date' element={<EventDetail events={events} />} />
         </Routes>
       </main>

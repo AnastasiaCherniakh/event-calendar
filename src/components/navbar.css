@@ -1,0 +1,40 @@
+nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1.2rem;
+    background-color: #00003C;
+    padding: 0.8rem 1rem;  
+    margin: 0;  
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 0.9rem;
+    transition: color 0.25s ease, border-bottom-color 0.25s ease;
+    padding-bottom: 0.2rem;
+    border-bottom: 2px solid transparent;
+}
+
+nav a:hover {
+    color: #EC4A3C;
+    border-bottom-color: #EC4A3C;
+}
+
+nav a.active {
+    color: #EC4A3C;
+    border-bottom-color: #EC4A3C;
+}
+
+@media (min-width: 600px) {
+    nav {
+        gap: 3rem;
+        padding: 1rem 2rem;
+    }
+
+    nav a {
+        font-size: 1rem;
+    }
+}
