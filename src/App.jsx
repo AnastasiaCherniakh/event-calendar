@@ -3,6 +3,7 @@ import { useState, useEffect } from 'react';
 import Navbar from './components/Navbar';
 import CalendarView from './pages/CalendarView';
 import AddEvent from './pages/AddEvent';
+import EventDetail from './pages/EventDetail';
 import './App.css';
 
 export default function App() {
@@ -34,6 +35,7 @@ export default function App() {
     })
     .catch(err => console.log("Something went wrong! Failed to load the data.", err))
   }, []);
+
   return (
     <>
       <Navbar />
@@ -42,6 +44,7 @@ export default function App() {
         <Routes>
           <Route path='/' element={<CalendarView events={events}/>} />
           <Route path='/add-event' element={<AddEvent />} />
+          <Route path='/event/:date' element={<EventDetail events={events} />} />
         </Routes>
       </main>
     </>
