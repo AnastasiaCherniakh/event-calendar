@@ -1,0 +1,23 @@
+During the development of this project I used ChatGPT as a learning and support tool, not as a code generator. I designed and implemented 
+the full application myself, such as structure, logic and styling. I used AI mainly to clarify syntax, verify ideas and get feedback on
+specific details. Every part of the code was tested, understood and rewritten by me to fit the project's logic and requirements.
+
+Before using AI, I already had a clear picture of how the app should work: how the data should flow, how each component should interact 
+and what the user experience should be. I used AI only when I wanted to learn, verify or enhance specific parts of my implementation.
+
+Here are a few examples of how I used AI responsibly during development:
+- Styling and color: Since I'm not a designer, I asked ChatGPT to help me find color combinations that would match two main colors (dark blue
+and red) that I chose.
+- Calendar grid logic: When planning how to generate the calendar grid dynamically, I wanted to confirm that my approach using JavaScript Date object
+to calculate the first and last days of the month, and fill up 42 cells, was efficient and accurate. I used AI to verify the logic behind this approach 
+and then wrote and tested the implementation myself.
+- Date labels: I wanted to display readable month labels like "November 2025". AI suggested using the toLocaleString/toLocaleDateString methods. I verified 
+their behavior in the browser and adjusted them to fit my calendar structure.
+- Time formatting: The data file contained event times in UTC format. I also wanted to display it in the user's local time, so I asked AI how to best achieve that.
+I learned about using ISO date format, which makes converting between time zones much easier.
+- Normalizing time strings: I wanted to ensure that all times included seconds. I asked AI how to check if a time string was in "HH:MM" format. AI suggested using
+a regular expression. The regex checks that the string starts and ends with exactly two digits for hours, followed by a colon, then exactly two digits for minutes.
+I implemented this in my own function to normalize time to include seconds.
+
+Whenever I used AI, I didn't copy code directly. I treated it like a mentor, a way to confirm that I was on the right track. I tested every suggestion, rewrote 
+it in my own way and cross-checked it with official documentation (React and MDN) to ensure accuracy.
