@@ -7,6 +7,11 @@ export default function EventDetail( { events } ){
     // Filter all events for this date
     const eventsForDate = events.filter(event => event.date === date);
 
+    // Convert an ISO date-time string into the user's local time format
+    const toLocalTime = (isoString) => {
+        return new Date(isoString).toLocaleString();
+    }
+
      // Display teams for an event
     const displayTeams = (homeTeam, awayTeam) => {
         return (
@@ -41,6 +46,7 @@ export default function EventDetail( { events } ){
                         <p><span className="label">Stage: </span>{event.stage || "N/A"}</p>
                         <p><span className="label">Date: </span>{event.date}</p>
                         <p><span className="label">Time (UTC): </span>{event.time}</p>
+                        <p><span className="label">Time (Local): </span>{toLocalTime(event.dateTimeISO)}</p>
                         <p><span className="label">Status: </span>{event.status}</p>
 
                         {displayTeams(event.homeTeam, event.awayTeam)}
@@ -62,6 +68,7 @@ export default function EventDetail( { events } ){
                         <h3 className="event-title">{event.sport}</h3>
                         <p><span className="label">Stage: </span>{event.stage || "N/A"}</p>
                         <p><span className="label">Time (UTC): </span>{event.time}</p>
+                        <p><span className="label">Time (Local): </span>{toLocalTime(event.dateTimeISO)}</p>
                         <p><span className="label">Status: </span>{event.status}</p>
 
                         {displayTeams(event.homeTeam, event.awayTeam)}

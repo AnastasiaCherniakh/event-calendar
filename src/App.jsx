@@ -12,10 +12,12 @@ export default function App() {
   // Convert nested json into flat array of objects
   function simplifyData(rawData) {
     return rawData.data.map((event, index) => {
+      const dateTimeISO = `${event.dateVenue}T${event.timeVenueUTC}Z`;
       return {
         id: index,
         date: event.dateVenue,
         time: event.timeVenueUTC,
+        dateTimeISO,
         status: event.status,
         homeTeam: event.homeTeam?.name ?? "Not yet defined",
         awayTeam: event.awayTeam?.name ?? "Not yet defined",
