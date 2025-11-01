@@ -1,4 +1,5 @@
 import { useParams, useNavigate } from 'react-router-dom';
+import './eventDetail.css';
 
 export default function EventDetail( { events } ){
     const { date } = useParams();
